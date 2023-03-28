@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+      //   const root = document.querySelector("#root");
+
+      //   const element = document.createElement("h1");
+      //   element.textContent = "Hello form JavaScript!";
+      //   element.className = "heading-1";
+
+      //   root.appendChild(element);
+
+      const root = document.querySelector("#root");
+
+      const h1 = React.createElement("h1", {
+        children: "Hello from React",
+      });
+      const h2 = React.createElement("h1", {
+        children: "Hello from React",
+      });
+
+      const element = React.createElement(React.Fragment, {
+        children: [h1, h2],
+      });
+
+      ReactDOM.render(element, root);
+    </script>
+  </body>
+</html>
